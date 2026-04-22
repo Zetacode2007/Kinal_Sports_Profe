@@ -1,0 +1,243 @@
+[2026-04-22 12:55:01 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-04-22 12:55:01 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-04-22 12:55:01 INF] Database initialization completed successfully {"SourceContext":"Program"}
+[2026-04-22 12:55:01 ERR] An exception occurred while trying to decrypt the element. {"EventId":{"Id":43,"Name":"ExceptionOccurredTryingToDecryptElement"},"SourceContext":"Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor"}
+System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+[2026-04-22 12:55:01 ERR] An exception occurred while processing the key element '<key id="093d04ea-b93e-463c-9aa8-b4e5e81d554a" version="1" />'. {"EventId":{"Id":24,"Name":"ExceptionOccurredWhileProcessingTheKeyElement"},"SourceContext":"Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager"}
+System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.XmlEncryptionExtensions.DecryptElement(XElement element, IActivator activator)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.DeserializeDescriptorFromKeyElement(XElement keyElement)
+[2026-04-22 12:55:01 WRN] Key {093d04ea-b93e-463c-9aa8-b4e5e81d554a} is ineligible to be the default key because its CreateEncryptor method failed. {"EventId":{"Id":12,"Name":"KeyIsIneligibleToBeTheDefaultKeyBecauseItsMethodFailed"},"SourceContext":"Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver"}
+System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.XmlEncryptionExtensions.DecryptElement(XElement element, IActivator activator)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.DeserializeDescriptorFromKeyElement(XElement keyElement)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory.CreateEncryptorInstance(IKey key)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyBase.CreateEncryptor()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver.CanCreateAuthenticatedEncryptor(IKey key)
+[2026-04-22 12:55:01 WRN] Key {093d04ea-b93e-463c-9aa8-b4e5e81d554a} is ineligible to be the default key because its CreateEncryptor method failed. {"EventId":{"Id":12,"Name":"KeyIsIneligibleToBeTheDefaultKeyBecauseItsMethodFailed"},"SourceContext":"Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver"}
+System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.XmlEncryptionExtensions.DecryptElement(XElement element, IActivator activator)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.DeserializeDescriptorFromKeyElement(XElement keyElement)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory.CreateEncryptorInstance(IKey key)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyBase.CreateEncryptor()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver.CanCreateAuthenticatedEncryptor(IKey key)
+[2026-04-22 12:55:01 INF] AuthService API is running at http://localhost:5156. Health endpoint: http://localhost:5156/health {"SourceContext":"Program"}
+[2026-04-22 12:55:29 INF] HTTP OPTIONS /api/v1/auth/login responded 204 in 5.0327 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82R:00000001","ConnectionId":"0HNL0K2SJR82R"}
+[2026-04-22 12:55:30 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"61fff076-7bee-48cc-9247-e1f6feeb15df","ActionName":"AuthService.Api.Controllers.AuthController.Login (AuthService.Api)","RequestId":"0HNL0K2SJR82R:00000002","RequestPath":"/api/v1/auth/login","ConnectionId":"0HNL0K2SJR82R"}
+[2026-04-22 12:55:30 INF] HTTP POST /api/v1/auth/login responded 200 in 708.6516 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82R:00000002","ConnectionId":"0HNL0K2SJR82R"}
+[2026-04-22 12:55:34 INF] HTTP OPTIONS /api/v1/auth/users responded 204 in 0.2728 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82R:00000003","ConnectionId":"0HNL0K2SJR82R"}
+[2026-04-22 12:55:34 INF] HTTP GET /api/v1/auth/users responded 200 in 122.1184 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82R:00000004","ConnectionId":"0HNL0K2SJR82R"}
+[2026-04-22 12:55:38 INF] HTTP OPTIONS /api/v1/users/usr_fD5rKugUmN6J/role responded 204 in 0.4539 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82R:00000005","ConnectionId":"0HNL0K2SJR82R"}
+[2026-04-22 12:55:39 INF] HTTP PUT /api/v1/users/usr_fD5rKugUmN6J/role responded 200 in 90.4737 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82R:00000006","ConnectionId":"0HNL0K2SJR82R"}
+[2026-04-22 13:09:44 INF] HTTP OPTIONS /api/v1/auth/register responded 204 in 0.1431 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82S:00000001","ConnectionId":"0HNL0K2SJR82S"}
+[2026-04-22 13:09:44 INF] User Tucu_Bal registered successfully {"EventId":{"Id":1001,"Name":"LogUserRegistered"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"4a155f77-fa06-4d9f-ac99-9eb2137213d0","ActionName":"AuthService.Api.Controllers.AuthController.Register (AuthService.Api)","RequestId":"0HNL0K2SJR82S:00000002","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNL0K2SJR82S"}
+[2026-04-22 13:09:44 INF] HTTP POST /api/v1/auth/register responded 201 in 329.5047 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82S:00000002","ConnectionId":"0HNL0K2SJR82S"}
+[2026-04-22 13:09:44 INF] HTTP OPTIONS /api/v1/auth/users responded 204 in 0.0516 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82S:00000003","ConnectionId":"0HNL0K2SJR82S"}
+[2026-04-22 13:09:44 INF] HTTP GET /api/v1/auth/users responded 200 in 6.3195 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82S:00000004","ConnectionId":"0HNL0K2SJR82S"}
+[2026-04-22 13:10:05 ERR] Failed to send email {"SourceContext":"AuthService.Application.Services.EmailService","ActionId":"4a155f77-fa06-4d9f-ac99-9eb2137213d0","ActionName":"AuthService.Api.Controllers.AuthController.Register (AuthService.Api)","RequestId":"0HNL0K2SJR82S:00000002","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNL0K2SJR82S"}
+System.Net.Sockets.SocketException (10060): Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MailKit.Net.SocketUtils.SocketConnectState.OnEndConnect(IAsyncResult ar)
+--- End of stack trace from previous location ---
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetworkAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at AuthService.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 119
+[2026-04-22 13:10:05 ERR] Failed to send email {"SourceContext":"AuthService.Application.Services.EmailService","ActionId":"4a155f77-fa06-4d9f-ac99-9eb2137213d0","ActionName":"AuthService.Api.Controllers.AuthController.Register (AuthService.Api)","RequestId":"0HNL0K2SJR82S:00000002","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNL0K2SJR82S"}
+System.Net.Sockets.SocketException (10060): Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MailKit.Net.SocketUtils.SocketConnectState.OnEndConnect(IAsyncResult ar)
+--- End of stack trace from previous location ---
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetworkAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at AuthService.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 119
+[2026-04-22 13:10:05 ERR] Failed to send verification email {"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"4a155f77-fa06-4d9f-ac99-9eb2137213d0","ActionName":"AuthService.Api.Controllers.AuthController.Register (AuthService.Api)","RequestId":"0HNL0K2SJR82S:00000002","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNL0K2SJR82S"}
+System.InvalidOperationException: Failed to send email: Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+ ---> System.Net.Sockets.SocketException (10060): Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MailKit.Net.SocketUtils.SocketConnectState.OnEndConnect(IAsyncResult ar)
+--- End of stack trace from previous location ---
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetworkAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at AuthService.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 119
+   --- End of inner exception stack trace ---
+   at AuthService.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 171
+   at AuthService.Application.Services.EmailService.SendEmailVerificationAsync(String email, String username, String token) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 29
+   at AuthService.Application.Services.AuthService.<>c__DisplayClass9_0.<<RegisterAsync>b__0>d.MoveNext() in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\AuthService.cs:line 140
+[2026-04-22 13:20:24 INF] HTTP OPTIONS /api/v1/auth/register responded 204 in 0.2737 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82T:00000001","ConnectionId":"0HNL0K2SJR82T"}
+[2026-04-22 13:20:24 INF] User j_zeta18 registered successfully {"EventId":{"Id":1001,"Name":"LogUserRegistered"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"4a155f77-fa06-4d9f-ac99-9eb2137213d0","ActionName":"AuthService.Api.Controllers.AuthController.Register (AuthService.Api)","RequestId":"0HNL0K2SJR82T:00000002","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNL0K2SJR82T"}
+[2026-04-22 13:20:24 INF] HTTP POST /api/v1/auth/register responded 201 in 305.8526 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82T:00000002","ConnectionId":"0HNL0K2SJR82T"}
+[2026-04-22 13:20:24 INF] HTTP OPTIONS /api/v1/auth/users responded 204 in 0.0539 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82T:00000003","ConnectionId":"0HNL0K2SJR82T"}
+[2026-04-22 13:20:24 INF] HTTP GET /api/v1/auth/users responded 401 in 3.1370 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82T:00000004","ConnectionId":"0HNL0K2SJR82T"}
+[2026-04-22 13:20:45 ERR] Failed to send email {"SourceContext":"AuthService.Application.Services.EmailService","ActionId":"4a155f77-fa06-4d9f-ac99-9eb2137213d0","ActionName":"AuthService.Api.Controllers.AuthController.Register (AuthService.Api)","RequestId":"0HNL0K2SJR82T:00000002","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNL0K2SJR82T"}
+System.Net.Sockets.SocketException (10060): Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MailKit.Net.SocketUtils.SocketConnectState.OnEndConnect(IAsyncResult ar)
+--- End of stack trace from previous location ---
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetworkAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at AuthService.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 119
+[2026-04-22 13:20:45 ERR] Failed to send email {"SourceContext":"AuthService.Application.Services.EmailService","ActionId":"4a155f77-fa06-4d9f-ac99-9eb2137213d0","ActionName":"AuthService.Api.Controllers.AuthController.Register (AuthService.Api)","RequestId":"0HNL0K2SJR82T:00000002","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNL0K2SJR82T"}
+System.Net.Sockets.SocketException (10060): Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MailKit.Net.SocketUtils.SocketConnectState.OnEndConnect(IAsyncResult ar)
+--- End of stack trace from previous location ---
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetworkAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at AuthService.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 119
+[2026-04-22 13:20:45 ERR] Failed to send verification email {"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"4a155f77-fa06-4d9f-ac99-9eb2137213d0","ActionName":"AuthService.Api.Controllers.AuthController.Register (AuthService.Api)","RequestId":"0HNL0K2SJR82T:00000002","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNL0K2SJR82T"}
+System.InvalidOperationException: Failed to send email: Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+ ---> System.Net.Sockets.SocketException (10060): Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MailKit.Net.SocketUtils.SocketConnectState.OnEndConnect(IAsyncResult ar)
+--- End of stack trace from previous location ---
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetworkAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at AuthService.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 119
+   --- End of inner exception stack trace ---
+   at AuthService.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 171
+   at AuthService.Application.Services.EmailService.SendEmailVerificationAsync(String email, String username, String token) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 29
+   at AuthService.Application.Services.AuthService.<>c__DisplayClass9_0.<<RegisterAsync>b__0>d.MoveNext() in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\AuthService.cs:line 140
+[2026-04-22 13:22:07 INF] User j__sajche registered successfully {"EventId":{"Id":1001,"Name":"LogUserRegistered"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"4a155f77-fa06-4d9f-ac99-9eb2137213d0","ActionName":"AuthService.Api.Controllers.AuthController.Register (AuthService.Api)","RequestId":"0HNL0K2SJR82T:00000005","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNL0K2SJR82T"}
+[2026-04-22 13:22:07 INF] HTTP POST /api/v1/auth/register responded 201 in 82.1919 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82T:00000005","ConnectionId":"0HNL0K2SJR82T"}
+[2026-04-22 13:22:07 INF] HTTP GET /api/v1/auth/users responded 401 in 0.5318 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82T:00000006","ConnectionId":"0HNL0K2SJR82T"}
+[2026-04-22 13:22:28 ERR] Failed to send email {"SourceContext":"AuthService.Application.Services.EmailService","ActionId":"4a155f77-fa06-4d9f-ac99-9eb2137213d0","ActionName":"AuthService.Api.Controllers.AuthController.Register (AuthService.Api)","RequestId":"0HNL0K2SJR82T:00000005","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNL0K2SJR82T"}
+System.Net.Sockets.SocketException (10060): Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MailKit.Net.SocketUtils.SocketConnectState.OnEndConnect(IAsyncResult ar)
+--- End of stack trace from previous location ---
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetworkAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at AuthService.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 119
+[2026-04-22 13:22:28 ERR] Failed to send email {"SourceContext":"AuthService.Application.Services.EmailService","ActionId":"4a155f77-fa06-4d9f-ac99-9eb2137213d0","ActionName":"AuthService.Api.Controllers.AuthController.Register (AuthService.Api)","RequestId":"0HNL0K2SJR82T:00000005","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNL0K2SJR82T"}
+System.Net.Sockets.SocketException (10060): Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MailKit.Net.SocketUtils.SocketConnectState.OnEndConnect(IAsyncResult ar)
+--- End of stack trace from previous location ---
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetworkAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at AuthService.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 119
+[2026-04-22 13:22:28 ERR] Failed to send verification email {"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"4a155f77-fa06-4d9f-ac99-9eb2137213d0","ActionName":"AuthService.Api.Controllers.AuthController.Register (AuthService.Api)","RequestId":"0HNL0K2SJR82T:00000005","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNL0K2SJR82T"}
+System.InvalidOperationException: Failed to send email: Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+ ---> System.Net.Sockets.SocketException (10060): Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MailKit.Net.SocketUtils.SocketConnectState.OnEndConnect(IAsyncResult ar)
+--- End of stack trace from previous location ---
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, CancellationToken cancellationToken)
+   at MailKit.Net.SocketUtils.ConnectAsync(String host, Int32 port, IPEndPoint localEndPoint, Int32 timeout, CancellationToken cancellationToken)
+   at MailKit.MailService.ConnectNetworkAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at AuthService.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 119
+   --- End of inner exception stack trace ---
+   at AuthService.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 171
+   at AuthService.Application.Services.EmailService.SendEmailVerificationAsync(String email, String username, String token) in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\EmailService.cs:line 29
+   at AuthService.Application.Services.AuthService.<>c__DisplayClass9_0.<<RegisterAsync>b__0>d.MoveNext() in C:\Users\Informatica\Desktop\2024452\KinalSportsIN6BV-main\authentication-service\auth-service\src\AuthService.Application\Services\AuthService.cs:line 140
+[2026-04-22 13:51:52 INF] HTTP OPTIONS /api/v1/auth/users responded 204 in 0.0971 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82U:00000001","ConnectionId":"0HNL0K2SJR82U"}
+[2026-04-22 13:51:52 INF] HTTP GET /api/v1/auth/users responded 401 in 0.4138 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82U:00000002","ConnectionId":"0HNL0K2SJR82U"}
+[2026-04-22 13:52:14 INF] HTTP OPTIONS /api/v1/auth/login responded 204 in 0.1778 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82U:00000003","ConnectionId":"0HNL0K2SJR82U"}
+[2026-04-22 13:52:14 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"61fff076-7bee-48cc-9247-e1f6feeb15df","ActionName":"AuthService.Api.Controllers.AuthController.Login (AuthService.Api)","RequestId":"0HNL0K2SJR82U:00000004","RequestPath":"/api/v1/auth/login","ConnectionId":"0HNL0K2SJR82U"}
+[2026-04-22 13:52:14 INF] HTTP POST /api/v1/auth/login responded 200 in 51.2629 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82U:00000004","ConnectionId":"0HNL0K2SJR82U"}
+[2026-04-22 13:52:17 INF] HTTP GET /api/v1/auth/users responded 200 in 5.1630 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82U:00000005","ConnectionId":"0HNL0K2SJR82U"}
+[2026-04-22 13:55:27 INF] HTTP GET /api/v1/auth/users responded 200 in 4.1299 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82V:00000001","ConnectionId":"0HNL0K2SJR82V"}
+[2026-04-22 13:56:51 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"61fff076-7bee-48cc-9247-e1f6feeb15df","ActionName":"AuthService.Api.Controllers.AuthController.Login (AuthService.Api)","RequestId":"0HNL0K2SJR82V:00000002","RequestPath":"/api/v1/auth/login","ConnectionId":"0HNL0K2SJR82V"}
+[2026-04-22 13:56:51 INF] HTTP POST /api/v1/auth/login responded 200 in 45.1953 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR82V:00000002","ConnectionId":"0HNL0K2SJR82V"}
+[2026-04-22 14:00:52 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"61fff076-7bee-48cc-9247-e1f6feeb15df","ActionName":"AuthService.Api.Controllers.AuthController.Login (AuthService.Api)","RequestId":"0HNL0K2SJR830:00000001","RequestPath":"/api/v1/auth/login","ConnectionId":"0HNL0K2SJR830"}
+[2026-04-22 14:00:52 INF] HTTP POST /api/v1/auth/login responded 200 in 53.2472 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR830:00000001","ConnectionId":"0HNL0K2SJR830"}
+[2026-04-22 15:28:58 INF] HTTP OPTIONS /api/v1/users/usr_kYW7fvghD31d/role responded 204 in 0.0932 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR831:00000001","ConnectionId":"0HNL0K2SJR831"}
+[2026-04-22 15:28:58 INF] HTTP PUT /api/v1/users/usr_kYW7fvghD31d/role responded 401 in 0.4461 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR831:00000002","ConnectionId":"0HNL0K2SJR831"}
+[2026-04-22 15:28:59 INF] HTTP PUT /api/v1/users/usr_kYW7fvghD31d/role responded 401 in 0.3011 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR831:00000003","ConnectionId":"0HNL0K2SJR831"}
+[2026-04-22 15:29:00 INF] HTTP PUT /api/v1/users/usr_kYW7fvghD31d/role responded 401 in 0.6556 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR831:00000004","ConnectionId":"0HNL0K2SJR831"}
+[2026-04-22 15:29:00 INF] HTTP PUT /api/v1/users/usr_kYW7fvghD31d/role responded 401 in 0.3992 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR831:00000005","ConnectionId":"0HNL0K2SJR831"}
+[2026-04-22 15:29:00 INF] HTTP PUT /api/v1/users/usr_kYW7fvghD31d/role responded 401 in 0.6005 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR831:00000006","ConnectionId":"0HNL0K2SJR831"}
+[2026-04-22 15:29:15 INF] HTTP OPTIONS /api/v1/users/usr_EXKUZ8K9WUVx/role responded 204 in 0.0502 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR831:00000007","ConnectionId":"0HNL0K2SJR831"}
+[2026-04-22 15:29:15 INF] HTTP PUT /api/v1/users/usr_EXKUZ8K9WUVx/role responded 401 in 0.3110 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR831:00000008","ConnectionId":"0HNL0K2SJR831"}
+[2026-04-22 15:33:42 INF] HTTP OPTIONS /api/v1/auth/users responded 204 in 0.0920 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR832:00000001","ConnectionId":"0HNL0K2SJR832"}
+[2026-04-22 15:33:42 INF] HTTP GET /api/v1/auth/users responded 401 in 0.3941 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR832:00000002","ConnectionId":"0HNL0K2SJR832"}
+[2026-04-22 15:33:52 INF] HTTP OPTIONS /api/v1/auth/login responded 204 in 0.0735 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR832:00000003","ConnectionId":"0HNL0K2SJR832"}
+[2026-04-22 15:33:52 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"61fff076-7bee-48cc-9247-e1f6feeb15df","ActionName":"AuthService.Api.Controllers.AuthController.Login (AuthService.Api)","RequestId":"0HNL0K2SJR832:00000004","RequestPath":"/api/v1/auth/login","ConnectionId":"0HNL0K2SJR832"}
+[2026-04-22 15:33:52 INF] HTTP POST /api/v1/auth/login responded 200 in 54.6973 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR832:00000004","ConnectionId":"0HNL0K2SJR832"}
+[2026-04-22 15:33:55 INF] HTTP GET /api/v1/auth/users responded 200 in 3.4511 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR832:00000005","ConnectionId":"0HNL0K2SJR832"}
+[2026-04-22 15:34:02 INF] HTTP PUT /api/v1/users/usr_EXKUZ8K9WUVx/role responded 200 in 8.1743 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR832:00000006","ConnectionId":"0HNL0K2SJR832"}
+[2026-04-22 15:34:06 INF] HTTP OPTIONS /api/v1/users/usr_dspwgAg9HwAW/role responded 204 in 0.1177 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR832:00000007","ConnectionId":"0HNL0K2SJR832"}
+[2026-04-22 15:34:06 INF] HTTP PUT /api/v1/users/usr_dspwgAg9HwAW/role responded 200 in 13.9245 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR832:00000008","ConnectionId":"0HNL0K2SJR832"}
+[2026-04-22 15:37:16 INF] HTTP PUT /api/v1/users/usr_dspwgAg9HwAW/role responded 200 in 11.0089 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR833:00000001","ConnectionId":"0HNL0K2SJR833"}
+[2026-04-22 16:48:59 INF] HTTP OPTIONS /api/v1/auth/login responded 204 in 0.0654 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR834:00000001","ConnectionId":"0HNL0K2SJR834"}
+[2026-04-22 16:48:59 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"61fff076-7bee-48cc-9247-e1f6feeb15df","ActionName":"AuthService.Api.Controllers.AuthController.Login (AuthService.Api)","RequestId":"0HNL0K2SJR834:00000002","RequestPath":"/api/v1/auth/login","ConnectionId":"0HNL0K2SJR834"}
+[2026-04-22 16:48:59 INF] HTTP POST /api/v1/auth/login responded 200 in 57.6492 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR834:00000002","ConnectionId":"0HNL0K2SJR834"}
+[2026-04-22 16:51:19 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"61fff076-7bee-48cc-9247-e1f6feeb15df","ActionName":"AuthService.Api.Controllers.AuthController.Login (AuthService.Api)","RequestId":"0HNL0K2SJR835:00000001","RequestPath":"/api/v1/auth/login","ConnectionId":"0HNL0K2SJR835"}
+[2026-04-22 16:51:19 INF] HTTP POST /api/v1/auth/login responded 200 in 57.5430 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR835:00000001","ConnectionId":"0HNL0K2SJR835"}
+[2026-04-22 16:53:01 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"61fff076-7bee-48cc-9247-e1f6feeb15df","ActionName":"AuthService.Api.Controllers.AuthController.Login (AuthService.Api)","RequestId":"0HNL0K2SJR835:00000002","RequestPath":"/api/v1/auth/login","ConnectionId":"0HNL0K2SJR835"}
+[2026-04-22 16:53:01 INF] HTTP POST /api/v1/auth/login responded 200 in 57.1580 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR835:00000002","ConnectionId":"0HNL0K2SJR835"}
+[2026-04-22 16:54:17 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"61fff076-7bee-48cc-9247-e1f6feeb15df","ActionName":"AuthService.Api.Controllers.AuthController.Login (AuthService.Api)","RequestId":"0HNL0K2SJR835:00000003","RequestPath":"/api/v1/auth/login","ConnectionId":"0HNL0K2SJR835"}
+[2026-04-22 16:54:17 INF] HTTP POST /api/v1/auth/login responded 200 in 83.5159 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR835:00000003","ConnectionId":"0HNL0K2SJR835"}
+[2026-04-22 16:56:25 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"61fff076-7bee-48cc-9247-e1f6feeb15df","ActionName":"AuthService.Api.Controllers.AuthController.Login (AuthService.Api)","RequestId":"0HNL0K2SJR835:00000004","RequestPath":"/api/v1/auth/login","ConnectionId":"0HNL0K2SJR835"}
+[2026-04-22 16:56:25 INF] HTTP POST /api/v1/auth/login responded 200 in 58.0469 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL0K2SJR835:00000004","ConnectionId":"0HNL0K2SJR835"}
